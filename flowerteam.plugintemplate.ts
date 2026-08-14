@@ -2,12 +2,7 @@
 Flower plugin example/template
 */
 
-import {
-	BasePlugin,
-	FlowerAPI,
-	type FlowerMeta,
-	LogSource,
-} from "@flowerloader/api";
+import { BasePlugin, type FlowerMeta } from "@flowerloader/api";
 import type { GameDataCOAW } from "@flowerloader/coawtypes";
 
 export const META: FlowerMeta = {
@@ -25,7 +20,8 @@ export default class Plugin extends BasePlugin<GameDataCOAW> {
 	/**
      * Uncomment this to add code to your constructor
      * Make sure to always call your base constructor via super()
-     * 
+     * Also add FlowerAPI and LogSource back to the import above.
+     *
     constructor(flower: FlowerAPI<GameDataCOAW>, logger: LogSource)
     {
         super(flower, logger);
